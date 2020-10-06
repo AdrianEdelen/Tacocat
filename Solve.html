@@ -8,8 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TacocaT palindrome</title>
-
+    <title>TacocaT</title>
+    <link href="img\favicon.png" rel="icon">
+    <link href="img\apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="Content/Style.css" rel="stylesheet" />
@@ -20,13 +21,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <a class="navbar-brand" href="/Index.html">TacocaT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Index.html">
                             Home
                         </a>
@@ -41,7 +42,7 @@
                         <a class="nav-link" href="https://github.com/AdrianEdelen/Tacocat" target="_blank">Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="https://adrianedelen.com" target="_blank">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
@@ -55,16 +56,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">The Exercise</h1>
-                <p class="lead">This page will display your JS exercise</p>
-                <ul class="list-unstyled">
-                    <li>The Javascript Exercise</li>
-                    <li>Is placed on this page</li>
-                </ul>
+                <h1 class="mt-5">Try It Out</h1>
+                <p class="lead">type a word in the input box below and click the button to find out if the word is a palindrome</p>
             </div>
         </div>
-        <div class="row row-min-height-50px bg-dark">aa</div>
-        <div class="row bg-secondary vh">
+        
+        <div class="row">
+            <div class="col-2"></div>
             <div class="col text-center">
                 <input type="text" id="userInput" placeholder="tacocat" />
             </div>
@@ -74,12 +72,11 @@
             <div class="col text-center">
                 <div><span id="result"></span></div>
             </div>
-            <div class="row vh-100">
+            <div class="col-2"></div>
+            
 
-            </div>
-            
-            
-            
+
+
 
 
 
@@ -90,23 +87,12 @@
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="Scripts/Custom.js"></script>
     <script>
 
 
-        document.getElementById("reverseButton").addEventListener("click", () => {
-            //step 1 get the data
-            let regex = /[\W_]/g;
-            let userInput = document.getElementById("userInput").value;
-            let userInputLowerReg = userInput.toLowerCase().replace(regex, '');
-            let revInput = userInputLowerReg.split('').reverse().join('');
-
-            if (revInput === userInputLowerReg) {
-                document.getElementById("result").innerText = userInput + " is a palindrome!";
-            } else {
-                document.getElementById("result").innerText = userInput + " is not a palindrome!";
-            }
-        })
-
+        
     </script>
 
 </body>
