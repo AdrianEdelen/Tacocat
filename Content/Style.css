@@ -1,4 +1,5 @@
 ﻿body {
+	background-color: #464c52;
 }
 
 .card {
@@ -6,3 +7,4 @@
 	float: none;
 	margin-bottom: 10px;
 }
+
